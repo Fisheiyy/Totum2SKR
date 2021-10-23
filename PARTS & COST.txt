@@ -6,3 +6,4 @@ Raspberry Pi 3B+ - $35.00 - £25.44 https://www.raspberrypi.com/products/raspber
 
 Total - $167.26 - £121.56 - NO SHIPPING COST
 New Stepper Motor and Extruder can be skipped usually but in my case its needed.
+Raspberry pi can be skipped if you prefer pronterface or something similar instead of octoprint.
