@@ -1,0 +1,197 @@
+Revision history
+================
+
+Fix: 1.1.1.3 (2018-04-04)
+-------------------------
+- Fix power supply issues in Laser Heads
+- Fix `M999` behavior with pending temperature errors
+- Fix `M42` command output
+
+Fix: 1.1.1.2 (2018-03-01)
+-------------------------
+- More stable temperature readings on edge and error conditions
+
+Fix: 1.1.1.1 (2018-01-23)
+-------------------------
+- Fix heaters not working inside PID tuning procedure (M303 command)
+- Fix missing bed temperature readings with some toolheads
+- Better stability when reconfiguring tools and installing new heads
+- Fix M563 output when the bed's thermistor is active without the bed heater being so
+
+Rev: 1.1.1 (2018-01-11)
+-----------------------
+- Add support functions for Fabtotum Laser Head PRO
+- Added support for head-installed _external probe_, `M746 S2` selects it
+- Expanded `G38` for external-probing with movement on all the three axes
+- Better emergency stop in case of head faults
+- `M793 S0` can be issued to shut-down all head lines and functions
+- Changes in tool configuration
+  - `M563` accepts multiple values per parameter, e.g. `M563 P0 D0 H0:1`
+  - Revised heaters numbering:
+    - 0: bed heater
+    - 1: head heater
+    - 4: bed temp sensor with disabled heater
+    - 5: head temp sensor with disabled heater
+  - Revised `M563` command output
+- Added support for a motor driver (drive n.3) through bed pins; no DIR pin available
+
+Fix: 1.1.0.2 (2017-06-29)
+-------------------------
+- Improvements in homing procedure
+- Make stepper motor's idle hold timout configurable with `M84`
+- Fix temperature readings
+- Fix parameter parsing inside `M85`
+- Fix parsing of line number words (N's can now be used inside `M790`...)
+
+Min: 1.1.0 (2017-05-29)
+-------------------------
+- Corrected and normalized command output format:
+  - 'echo:' prefixes removed
+  - All errors are prefixed with 'E:' or 'A:'
+  - Changed command output format of: G30,G38,M105,M109,M190,M303
+  - Various fixes to commands output
+- Added auto temp reporting function, managed through M155
+- Added support for wire end check. M805 enable/disable check
+- Added M564 command: set axes limits and restrict movements
+- Fixed laser head initialization
+- Small changes in documentation
+
+Rev: 1.0.0098 (2017-04-12)
+--------------------------
+- Improved homing procedure for partial homing
+- Better laser timeout management: M60 has a longer, configurable, timeout; M61 retains a short immutable timeout
+- Laser is turned down when carriage hits X or Y endstops
+- Added support for head-embedded feeders
+- Improved support for custom heads
+- Support for setting min temp with M801's R parameter
+- Improved G30 positioning
+- M150 command can set rgb led glowing speed
+- Modified M300 command to play sequences of beeps
+- Firmware startup messages suppressed
+- Various small fixes and improvements
+
+Fix: 1.0.0097.2 (2017-03-01)
+----------------------------
+- Head state is not reset after M999
+- Fixed G28 not setting X/Y as homed after G28 without arguments
+- Lowered min heater temperature down to 10 degrees
+- Setting laser power to 0 actually turns off the laser beam
+- Ambient color correctly reset after homing
+
+Fix: 1.0.0097.1 (2017-01-27)
+----------------------------
+- Min power level for laser
+- Auto fan on when laser active
+- Better diagnostic messages for laser head
+
+Rev: 1.0.0097 (2017-01-23)
+--------------------------
+- Final laser support: moved dedicated commands from M6/7 to M60/1/2
+- Broadened number of cases in which head misplacement is detected
+- Workaround for false z-min endstop triggerings
+
+Fix 1.0.0096.1 (2016-11-22)
+---------------------------
+- Increased MAX TEMP value for different heads
+
+Rev 1.0.0096 (2016-11-22)
+-------------------------
+- Fixed G27/G28 behaviour near axis limits and silenced verbose error messages
+- Fixed G29 hitting Y endstop
+- Changed M503 and other diagnostic outputs
+- Fixed THERMISTOR_INPUT_HOTSWAP interference with heaters management
+
+Rev 1.0.0095.1 (2016-05-02)
+---------------------------
+- Fixed a bug with timing when using M3,M4,M5
+- Subtractive gcodes will not require a G4 before M5 or after M3 and M4 like before..
+  M3,M4 and M5 will in fact start spinning after 1.5 seconds the last movement operation is completed.
+  This allows to use some standard Gcode Posts processors instead of manually editing the code with pauses
+
+Rev 1.0.0095 (2016-04-22)
+-------------------------
+- Default Baud rate changed to 250000 bps.
+- General Error management & Endstop management revamp.
+- Changed sound notifications
+- Moved G28 homing position to the effective center of the build area point of rotation when setting the screws.The point is in the center of the print area in the V2 heated bed.
+- Fixed G28 inability to probe the center of the work-area when z_max_endstop is triggered
+- Sounds alerts revamp to be more clear, silent mode can be triggered on some commands that usually emit sound.
+  - M735 S1-0 enable /disable silent mode (less beeps all around)
+- If door safety is enabled, opening the door will trigger an instant emergency stop of all movement and routines, reverting the unit to a safe situation. Door safety can still be enabled or disabled from the FABUIs settings>hardware menu.
+- Inactivity timer changed to 10 minutes for longer heating times.
+- Fan management for V1 and V2 heads (SELECTABLE_AUTO_FAN_ON_TEMP_CHANGE behaviour modified: V2 heads won't have mandatory auto-cooling unless wanted, while V1 will have auto-cooling unless configured as disabled.) This reduces the heating time with V2 heads while avoiding clogging due to prolonged overheating in V1 heads.
+- Added optional external power supply shutdown procedure (M786).
+- Added new error codes. Min_temp extrusion now is triggered on the FABUI as well:
+  - ERROR_AMBIENT_TEMP 122 (when ambient temp is < extruder_0_mintemp
+  - ERROR_EXTRUDE_MINTEMP 123 (when cold extrusion is triggered, M302 S0
+  - to disable)
+  - ERROR_LONG_EXTRUSION 124 (when extruding too much!)
+- Added command M793 to set the installed head version (dev only).
+  - All codes related to the head have been discontinued in favour of a single ID.
+
+Rev 1.0.0093 (2015-12-21)
+-------------------------
+- Removed Flickering during homing
+- Removed M728 color changes
+- Merged pull request #12
+- PRISM Preparatory work (M785 turn on/off UV Module)
+- Laser support: M6 S[0-255] turn head laser on (+24Vdc) M7 turn laser off
+- M786 external PSU power off pin control
+
+Rev 1.0.0091 (2015-07-06)
+-------------------------
+- Performance: Updated base configurations (Jerks)
+- Other: Introduced M763 SX Hardware batch numbering
+
+Rev 1.0.008 (2015-05-29)
+------------------------
+- Heater,Milling Motor, Bed are disabled after 8 minutes of no physical (movement, heating) activity.
+- Fan Auto on if received M109 or M104. M106 can override speed and M107 can disable it as usual.
+- Changed default Accelerations and Jerk to match FAB UI 0.875 defaults
+- Added support for Capacitive Probe /external Endstop with G38 (Code by Imarin)
+- Added support for impossible endstops combinations. (Code by Imarin)
+- changes on Safety lockdown & other nasty safety messages.
+- changed fading speeds
+
+
+Rev 1.0.007 (26/01/2015)
+-----------------------
+- review of Autobed leveling procedure. Fixing of probed points' X and Y coordinates signs
+- added M-code M714 to select the homing X switch (max or min) to allow machine operation even with X min swicth fail (M714 S0->select X min switch, M714 S1->select X max switch)
+- Improved reactivity on Stop command for a failure
+- changed displayed error after endstop hit (changed to "106" error code for Xmax,"107" for Xmin,"108" for Ymax, "109" for Ymin, instead of general kill error code "100")
+
+Rev 1.0.006 (02/12/2014)
+-----------------------
+- review of Autobed leveling procedure. Fixing of probed points' X and
+  Y coordinates signs
+
+Rev 1.0.005 (24/11/2014)
+------------------------
+- added M732 code for enable/disable the operations kill on door
+  opening permanently (M732 S0->disable(unsafe),M732 S1->enable(safe))
+
+Rev 1.0.004 (29/09/2014)
+------------------------
+- updated G30 to probe at max z=(probe length-1mm)
+- added M-code M779 to force head serial ID reading even if the
+  machine has been turned on without head (for testing purpose only)
+
+Rev 1.0.003 (22/09/2014)
+------------------------
+- changed M730 behavior, now command does not clear error ack signal
+  (only M999 clear the error ack signal)
+- changed displayed error after DOOR opening during movements
+  (changed to "102" error code instead of general kill error code "100")
+
+Rev 1.0.002 (26/09/2014)
+------------------------
+- changed Z axis speed for G27 command (6 times faster)
+- changed probing point for z for homing z (from bottom left to
+  center-center)
+- changed maximum probing height is 1mm closer than factory stored
+  zprobe_offset (safer to avoid damage after probe malfunction)
+
+Rev 1.0.001 (03/09/2014)
+------------------------
+- Initial revision based upon Marlin firmware for ATMega controllers
