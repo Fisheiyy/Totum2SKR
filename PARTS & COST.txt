@@ -3,7 +3,8 @@ Dual Drive BMG Extruder - $21.99 - £15.98 https://amzn.to/3pvX5lV
 SKR Mini E3 V2 - $52.99 - £38.51 https://amzn.to/3B76DWT
 New Stepper Motor - $7.99 - £5.81 https://www.casunsteppermotor.com/product/42shd0404-22-stepper-engine-1-8/
 Raspberry Pi 3B+ - $35.00 - £25.44 https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/
+JST-XH Connectors - $11.99 - £8.71
 
-Total - $167.26 - £121.56 - NO SHIPPING COST
+Total - $178.25 - £130.21 - NO SHIPPING COST
 New Stepper Motor and Extruder can be skipped usually but in my case its needed.
 Raspberry pi can be skipped if you prefer pronterface or something similar instead of octoprint.
