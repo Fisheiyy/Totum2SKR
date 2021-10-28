@@ -1,9 +1,8 @@
 E3D Lite Hotend     $34.99 - £25.46   https://bit.ly/3pIl81f
 BMG Extruder        $15.99 - £11.64   https://amzn.to/3nAOvQr
 SKR Mini E3 V2      $52.99 - £38.51   https://amzn.to/3B76DWT
-Raspberry Pi 3B+    $35.00 - £25.44   https://bit.ly/2ZB80QT
 Crimping Tool       $15.99 - £11.64   https://amzn.to/3GtVtzh
 JST-XH Connectors   $7.99  - £5.81    https://amzn.to/3mja2h2
 20A Buck Converter  $18.99 - £13.82   https://amzn.to/3ErLOaN
 
-            Total - $181.94 - £132.32 - NO SHIPPING COST INCLUDED
+            Total - $146.94 - £106.88 - NO SHIPPING COST INCLUDED
