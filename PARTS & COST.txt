@@ -1,8 +1,9 @@
-E3D Lite Hotend     $34.99 - £25.46   https://bit.ly/3pIl81f
-BMG Extruder        $15.99 - £11.64   https://amzn.to/3nAOvQr
-SKR Mini E3 V2      $52.99 - £38.51   https://amzn.to/3B76DWT
-Crimping Tool       $15.99 - £11.64   https://amzn.to/3GtVtzh
-JST-XH Connectors   $7.99  - £5.81    https://amzn.to/3mja2h2
-20A Buck Converter  $18.99 - £13.82   https://amzn.to/3ErLOaN
+E3D Lite Hotend       $34.99 - €30.91   https://amzn.to/3I1B6ui
+BMG Extruder          $15.99 - €14.13   https://amzn.to/3nAOvQr
+SKR Mini E3 V2        $52.99 - €46.82   https://amzn.to/3B76DWT
+Crimping Tool         $16.99 - €15.01   https://amzn.to/3GtVtzh
+JST-XH Connectors     $8.99  - €7.94    https://amzn.to/3mja2h2
+4x 5A Buck Converter  $16.00 - €14.14   https://amzn.to/2Zy5v1S
+2x 5015 Blower Fans   $5.99  - €5.29    https://amzn.to/3E1jc8g
 
-            Total - $146.94 - £106.88 - NO SHIPPING COST INCLUDED
+              Total - $151.94 - €134.24 - NO SHIPPING COST INCLUDED
