@@ -936,6 +936,13 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
+
+// FABtotum mechanical proprieties:
+// NOTE: 1/16 microstepping!!
+// Z: 1:2 Z axis ratio (pulley 10 to 20 teeths)
+// X Y : 1:1 direct belt drive on 2mm pitch * 10 teeths t10 pulley.
+// extruder 1:20 worm gear.
+
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 72.5811, 72.5811, 2133.333, 3048.1593 }
 
 /**
@@ -983,7 +990,7 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-//#define CLASSIC_JERK
+#define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 25.0
   #define DEFAULT_YJERK 25.0
@@ -1000,7 +1007,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    1.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1330,8 +1337,8 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
@@ -1382,12 +1389,12 @@
 #define Y_BED_SIZE 240
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
+#define X_MAX_POS 205
 #define X_MIN_POS 0
+#define Y_MAX_POS 235
 #define Y_MIN_POS 0
+#define Z_MAX_POS 235
 #define Z_MIN_POS 0
-#define X_MAX_POS 214
-#define Y_MAX_POS 244
-#define Z_MAX_POS 241.5
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1754,7 +1761,7 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (20*60), (20*60), (4*60) }
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
