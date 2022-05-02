@@ -1,7 +1,7 @@
-24v Bowden V6 Hotend  $34.99 - €30.91   https://amzn.to/3I1B6ui --- ALTERNATIVE; Trianglelabs 24v All Metal V6  $17.90 - €15.79  https://bit.ly/3rql5rJ
-BMG Extruder          $15.99 - €14.13   https://amzn.to/3nAOvQr
-SKR Mini E3 V2        $52.99 - €46.82   https://amzn.to/3B76DWT
-Crimping Tool         $16.99 - €15.01   https://amzn.to/3GtVtzh
-JST-XH Connectors     $8.99  - €7.94    https://amzn.to/3mja2h2
-4x 5A Buck Converter  $14.99 - €13.24   https://amzn.to/2Zy5v1S
-2x 5015 Blower Fans   $5.99  - €5.29    https://amzn.to/3E1jc8g
+Trianglelab 24V All Metal V6 $17.90 - €15.79  https://bit.ly/3rql5rJ
+BMG Extruder                 $15.99 - €14.13  https://amzn.to/3nAOvQr
+SKR Mini E3 V3               $44.99 - €42.66  https://amzn.to/3746UAP
+JST Crimping Tool            $16.99 - €15.01  https://amzn.to/3GtVtzh
+JST-XH Connectors            $8.99  - €7.94   https://amzn.to/3mja2h2
+1x 24V 5015 Blower Fan       $7.21  - €6.84   https://bit.ly/3LySE27
+1x 24V Ball 100CM 40mm Fan   $10.67 - €10.12  https://bit.ly/3F55ToC
